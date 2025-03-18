@@ -1,0 +1,21 @@
+ul{
+    list-style: none;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    background: lightslategray;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;;
+}
+
+.li button{
+    padding: 6px 10px;
+    border-radius: 5px;
+    background: red;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+}
