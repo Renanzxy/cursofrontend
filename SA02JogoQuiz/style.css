@@ -1,5 +1,5 @@
 body{
-    font-family: Comic sans MS;
+    font-family: Comic Sans MS;
     text-align: center;
     background-color: antiquewhite;
     margin-top: 40px;
@@ -14,7 +14,7 @@ body{
 }
 
 button{
-    padding: 10px 15px;  
+    padding: 10px 15px;
     margin: 10px;
     font-size: 16px;
     cursor: pointer;
@@ -26,4 +26,28 @@ button{
 button:disabled{
     background: gray;
     cursor: not-allowed;
+}
+
+/* criar a estilização do botão opcao */
+.opcao{
+    display: block;
+    padding: 10px;
+    background: lightblue;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.opcao:hover{
+    background: dodgerblue;
+    color: white;
+}
+
+.correta{
+    background: green !important;
+    color: white;
+}
+
+.errado{
+    background: red !important;
+    color: white;
 }
