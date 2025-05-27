@@ -11,7 +11,7 @@ export class Pedido {
     ) {}
 
     calcularTotal(): number {
-        const total = this.produto.reduce((acc,p)=> acc + this.produto.push.p.preco,0);
+        const total = this.produto.reduce((acc,p)=> acc + p.preco,0);
         return total - (total*(this.desconto/100));
     }
 }
