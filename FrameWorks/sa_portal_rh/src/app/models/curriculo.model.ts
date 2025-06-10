@@ -1,5 +1,6 @@
 //arquivo responsável pela modelagem de dados para vagas
-export class Vaga {
+export class Curriculo {
+  private _experiencia: any;
   //atributos
   // private _id: number;
   // private _nome: string;
@@ -52,10 +53,26 @@ export class Vaga {
   public set descricao(value: string) {
     this._descricao = value;
   }
-  public get salario(): number {
-    return this._salario;
+  public get experiencia(): string {
+    return this._experiencia;
   }
-  public set salario(value: number) {
-    this._salario = value;
+  public set salario(value: string) {
+    this._experiencia = value;
+  }
+
+  // Métodos de conversão de objetos
+  //Obj => Json
+  public toMap(): { [key: string]: any } {
+    return {
+      id: this._id,
+      nome: this._nome,
+      foto: this._foto,
+      descricao: this._descricao,
+      experiencia: this._experiencia,
+    };
+  }
+  //Json => Obj
+  static fromMap(map: any): Curriculo {
+    return new Curriculo(map.id, map.nome, map.foto, map.descricao, map.experiencia);
   }
 }

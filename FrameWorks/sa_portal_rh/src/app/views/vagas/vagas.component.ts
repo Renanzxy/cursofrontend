@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Vaga } from 'src/app/models/vaga_model';
+import { Vaga } from 'src/app/models/vaga.model';
 import { VagasService } from 'src/app/services/vagas.service';
 
 
@@ -28,13 +28,7 @@ export class VagasComponent implements OnInit {
       (e) => {
         //listar vaga por vaga dentro do vetor
         this.vagas = e.map((vaga) => {
-          return new Vaga(
-            vaga.id,
-            vaga.nome,
-            vaga.foto,
-            vaga.descricao,
-            vaga.salario
-          );
+          return Vaga.fromMap(vaga);
         });
       }
     );
